@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.Objects;
 
 import static javax.swing.JLayeredPane.DEFAULT_LAYER;
@@ -11,11 +12,13 @@ public class mainInterface extends JFrame {
     JPanel mainBoard;
     ImageIcon img;
     JLabel background;
+    BufferedImage myPicture;
+    JLabel picLabel;
 
     public mainInterface() {
         this.setSize(900,900);
         this.setLocationRelativeTo(null);
-        this.setResizable(true);
+        this.setResizable(false);
 
         ImageIcon img = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("chess.jpg")));
         JLabel background = new JLabel("", img, JLabel.CENTER);
@@ -53,6 +56,16 @@ public class mainInterface extends JFrame {
 
         layeredPane.add(mainBoard, DEFAULT_LAYER);
         mainPanel.setBounds(98, 79, 720, 720);
+
+        // add pieces to individual squares
+        ImageIcon duke = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("kb.jpg")));
+        JLabel image = new JLabel("", duke, JLabel.CENTER);
+        image.setBounds(0, 0, 90, 90);
+        JPanel panel = (JPanel) mainBoard.getComponent( 0 ); // change index (currently 0) to access a specific square
+        panel.setBackground(Color.BLUE);
+
+        // add the image to the panel
+        panel.add(image);
 
         mainPanel.setVisible(true);
 

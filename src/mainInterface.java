@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import static javax.swing.JLayeredPane.DEFAULT_LAYER;
 
@@ -8,10 +7,6 @@ public class mainInterface extends JFrame {
     JPanel mainPanel;
     JLayeredPane layeredPane;
     JPanel mainBoard;
-
-    public void outline() {
-
-    }
 
     public mainInterface() {
         this.setSize(900,900);
@@ -47,30 +42,8 @@ public class mainInterface extends JFrame {
         mainPanel.setBounds(92, 80, 740, 740);
 
         mainPanel.setVisible(true);
-
-
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-
-//    public void graphics() {
-//
-//        JPanel p = new JPanel() {
-//            protected void paintComponent(Graphics g) {
-//                super.paintComponent(g);
-//                Dimension arcs = new Dimension(100, 100); //Border corners arcs {width,height}, change this to whatever you want
-//                int width = getWidth();
-//                int height = getHeight();
-//                Graphics2D graphics = (Graphics2D) g;
-//                graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-//
-//                //Draws the rounded panel with borders.
-//                graphics.setColor(Color.green);
-//                graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);//paint background
-//                graphics.setColor(Color.green);
-//                graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);//paint border
-//            }
-//        };
-//    }
 
     public static void main(String[] args) {
         mainInterface test = new mainInterface();
@@ -92,3 +65,22 @@ public class mainInterface extends JFrame {
 //        mainPanel.add(gridHori[i]);
 //        count += (forWidth*2);
 //        }
+
+
+//    JPanel p = new JPanel() {
+//        @Override
+//        protected void paintComponent(Graphics g) {
+//            super.paintComponent(g);
+//            Dimension arcs = new Dimension(100, 100); //Border corners arcs {width,height}, change this to whatever you want
+//            int width = getWidth();
+//            int height = getHeight();
+//            Graphics2D graphics = (Graphics2D) g;
+//            graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+//
+//            //Draws the rounded panel with borders.
+//            graphics.setColor(Color.green);
+//            graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);//paint background
+//            graphics.setColor(Color.green);
+//            graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);//paint border
+//        }
+//    };

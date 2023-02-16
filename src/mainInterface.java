@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
+
 import static javax.swing.JLayeredPane.DEFAULT_LAYER;
 
 public class mainInterface extends JFrame {
@@ -7,20 +9,29 @@ public class mainInterface extends JFrame {
     JPanel mainPanel;
     JLayeredPane layeredPane;
     JPanel mainBoard;
+    ImageIcon img;
+    JLabel background;
 
     public mainInterface() {
         this.setSize(900,900);
         this.setLocationRelativeTo(null);
         this.setResizable(true);
-        this.setVisible(true);
-        this.setContentPane(mainPanel);
 
-        //  Use a Layered Pane for this application
+        ImageIcon img = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("chess.jpg")));
+        JLabel background = new JLabel("", img, JLabel.CENTER);
+        background.setBounds(0, 0, 900, 900);
+
+        this.setVisible(true);
+        this.setContentPane(background);
+        this.add(mainPanel);
+
         layeredPane = new JLayeredPane();
         mainPanel.add(layeredPane);
-        layeredPane.setSize(740,740);
+        mainPanel.setLayout(new BorderLayout());
+        layeredPane.setSize(720,720);
 
         mainBoard = new JPanel();
+
         mainBoard.setLayout(new GridLayout(8, 8));
         mainBoard.setPreferredSize(layeredPane.getSize());
         mainBoard.setBounds(0,0,layeredPane.getWidth(), layeredPane.getHeight());
@@ -28,10 +39,8 @@ public class mainInterface extends JFrame {
         Color firstSqaure = Color.decode("#eeeed2");
         Color secondSquare = Color.decode("#769656");
 
-        for (int i = 0; i < 8; i++)
-        {
-            for (int j = 0; j < 8; j++)
-            {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
                 JPanel boardSquare = new JPanel(new BorderLayout());
                 boardSquare.setBackground((i + j) % 2 == 0 ? firstSqaure : secondSquare);
                 mainBoard.add(boardSquare);
@@ -43,7 +52,7 @@ public class mainInterface extends JFrame {
         mainBoard.getComponent( 26 ).setBackground(Color.pink);
 
         layeredPane.add(mainBoard, DEFAULT_LAYER);
-        mainPanel.setBounds(92, 80, 740, 740);
+        mainPanel.setBounds(98, 79, 720, 720);
 
         mainPanel.setVisible(true);
 
@@ -72,20 +81,3 @@ public class mainInterface extends JFrame {
 //        }
 
 
-//    JPanel p = new JPanel() {
-//        @Override
-//        protected void paintComponent(Graphics g) {
-//            super.paintComponent(g);
-//            Dimension arcs = new Dimension(100, 100); //Border corners arcs {width,height}, change this to whatever you want
-//            int width = getWidth();
-//            int height = getHeight();
-//            Graphics2D graphics = (Graphics2D) g;
-//            graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-//
-//            //Draws the rounded panel with borders.
-//            graphics.setColor(Color.green);
-//            graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);//paint background
-//            graphics.setColor(Color.green);
-//            graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);//paint border
-//        }
-//    };

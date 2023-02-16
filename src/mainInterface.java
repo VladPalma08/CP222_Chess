@@ -33,6 +33,29 @@ public class mainInterface extends JFrame {
         mainPanel.setLayout(new BorderLayout());
         layeredPane.setSize(720,720);
 
+        JButton button = new JButton("Menu");
+        button.setFont(new Font("Tahoma", Font.ITALIC, 11));
+        button.setForeground(Color.white);
+        button.setBackground(Color.decode("#4c4c4c"));
+        button.setSize(90,20);
+        button.setOpaque(false);
+        button.setContentAreaFilled(false);
+        button.setBorderPainted(false);
+        button.setVisible(true);
+        this.add(button);
+
+        JButton button2 = new JButton("New Game");
+        button2.setFont(new Font("Tahoma", Font.ITALIC, 11));
+        button2.setForeground(Color.white);
+        button2.setBackground(Color.decode("#4c4c4c"));
+        button2.setSize(110,20);
+        button2.setBounds(90,0,110,20);
+//        button2.setOpaque(false);
+//        button2.setContentAreaFilled(false);
+//        button2.setBorderPainted(false);
+        button2.setVisible(true);
+        this.add(button2);
+
         mainBoard = new JPanel();
 
         mainBoard.setLayout(new GridLayout(8, 8));
@@ -57,6 +80,8 @@ public class mainInterface extends JFrame {
         layeredPane.add(mainBoard, DEFAULT_LAYER);
         mainPanel.setBounds(98, 79, 720, 720);
 
+
+
         // add pieces to individual squares
         ImageIcon duke = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("kb.jpg")));
         JLabel image = new JLabel("", duke, JLabel.CENTER);
@@ -68,6 +93,7 @@ public class mainInterface extends JFrame {
         panel.add(image);
 
         mainPanel.setVisible(true);
+
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

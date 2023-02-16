@@ -38,10 +38,15 @@ public class mainInterface extends JFrame {
             }
         }
 
+        mainBoard.getComponent( 15 ).setBackground(Color.blue);
+        mainBoard.getComponent( 50 ).setBackground(Color.orange);
+        mainBoard.getComponent( 26 ).setBackground(Color.pink);
+
         layeredPane.add(mainBoard, DEFAULT_LAYER);
         mainPanel.setBounds(92, 80, 740, 740);
 
         mainPanel.setVisible(true);
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 

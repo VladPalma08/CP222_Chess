@@ -50,9 +50,9 @@ public class mainInterface extends JFrame {
         button2.setBackground(Color.decode("#4c4c4c"));
         button2.setSize(110,20);
         button2.setBounds(90,0,110,20);
-//        button2.setOpaque(false);
-//        button2.setContentAreaFilled(false);
-//        button2.setBorderPainted(false);
+        button2.setOpaque(false);
+        button2.setContentAreaFilled(false);
+        button2.setBorderPainted(false);
         button2.setVisible(true);
         this.add(button2);
 
@@ -73,27 +73,26 @@ public class mainInterface extends JFrame {
             }
         }
 
-        mainBoard.getComponent( 15 ).setBackground(Color.blue);
-        mainBoard.getComponent( 50 ).setBackground(Color.orange);
-        mainBoard.getComponent( 26 ).setBackground(Color.pink);
+//        mainBoard.getComponent( 15 ).setBackground(Color.blue);
+//        mainBoard.getComponent( 50 ).setBackground(Color.orange);
+//        mainBoard.getComponent( 26 ).setBackground(Color.pink);
 
         layeredPane.add(mainBoard, DEFAULT_LAYER);
         mainPanel.setBounds(98, 79, 720, 720);
 
-
-
         // add pieces to individual squares
-        ImageIcon duke = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("kb.jpg")));
+        ImageIcon duke = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("kb.svg")));
         JLabel image = new JLabel("", duke, JLabel.CENTER);
         image.setBounds(0, 0, 90, 90);
-        JPanel panel = (JPanel) mainBoard.getComponent( 0 ); // change index (currently 0) to access a specific square
-        panel.setBackground(Color.BLUE);
+
+        // change index (currently 0) to access a specific square
+//        JPanel panel = (JPanel) mainBoard.getComponent( 0 );
+//        panel.setBackground(Color.BLUE);
 
         // add the image to the panel
-        panel.add(image);
+//        panel.add(image);
 
         mainPanel.setVisible(true);
-
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

@@ -12,22 +12,23 @@ public class mainInterface extends JFrame {
     JLayeredPane layeredPane;
     JPanel mainBoard;
     JButton menuButton;
+
 //    ImageIcon img;
 //    JLabel background;
 //    BufferedImage myPicture;
 //    JLabel picLabel;
 
 //    Method for creating buttons:
-//    public void createButton(JButton button) {
-//        button.setFont(new Font("Tahoma", Font.ITALIC, 11));
-//        button.setForeground(Color.white);
-//        button.setBackground(Color.decode("#4c4c4c"));
-//        button.setSize(90,20);
-//        button.setContentAreaFilled(false);
-//        button.setBorderPainted(false);
-//        button.setVisible(true);
-//        this.add(button);
-//    }
+    public void createButton(JButton button) {
+        button.setFont(new Font("Tahoma", Font.ITALIC, 11));
+        button.setForeground(Color.white);
+        button.setBackground(Color.decode("#4c4c4c"));
+        button.setSize(90,20);
+        button.setContentAreaFilled(false);
+        button.setBorderPainted(false);
+        button.setVisible(true);
+        this.add(button);
+    }
 
     public void createMenuButton() {
         JButton button = new JButton();

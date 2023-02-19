@@ -21,6 +21,7 @@ public class menuInterface extends JFrame {
 
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
+                menuInterface.super.setVisible(false);
                 mainInterface board = new mainInterface();
             }
         });

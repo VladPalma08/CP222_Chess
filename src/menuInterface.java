@@ -14,9 +14,9 @@ public class menuInterface extends JFrame {
         button.setForeground(Color.white);
         button.setText("Testing");
         button.setBackground(Color.decode("#4c4c4c"));
-        button.setSize(500,500);
-//        button.setContentAreaFilled(false);
-//        button.setBorderPainted(false);
+        button.setBounds(203,410,380,63 );
+        button.setContentAreaFilled(false);
+        button.setBorderPainted(false);
         button.setVisible(true);
 
         button.addActionListener(new ActionListener(){
@@ -29,17 +29,24 @@ public class menuInterface extends JFrame {
     }
 
     public menuInterface() {
-        this.setSize(900,920);
+        // setting the panel's dimensions
+        Dimension def = new Dimension(800,800);
+        this.setUndecorated(true);
+        this.setBounds(0,0,800,800);
+        this.setPreferredSize(def);
+        this.setMaximumSize(def);
+        this.setMinimumSize(def);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 
         ImageIcon menuImage = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("menu.jpg")));
         JLabel background = new JLabel("", menuImage, JLabel.CENTER);
-        background.setBounds(0, 0, 900, 990);
+        background.setBounds(0, 0, 800, 800);
 
         this.setVisible(true);
         this.setContentPane(background);
         createButton();
+        this.pack();
     }
 
     public static void main(String[] args) {

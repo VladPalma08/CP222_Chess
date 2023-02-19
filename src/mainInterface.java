@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Method;
 import java.util.Objects;
 
 import static javax.swing.JLayeredPane.DEFAULT_LAYER;
@@ -11,72 +12,43 @@ public class mainInterface extends JFrame {
     JPanel mainPanel;
     JLayeredPane layeredPane;
     JPanel mainBoard;
-    JButton menuButton;
 
-//    ImageIcon img;
-//    JLabel background;
-//    BufferedImage myPicture;
-//    JLabel picLabel;
+    JButton menuButton;
+    JButton newGame;
+    JButton exit;
 
 //    Method for creating buttons:
-    public void createButton(JButton button) {
+    public void createButton(JButton button, int x, int y, Dimension d, ActionEvent action) {
+        button = new JButton("Testing");
         button.setFont(new Font("Tahoma", Font.ITALIC, 11));
         button.setForeground(Color.white);
         button.setBackground(Color.decode("#4c4c4c"));
-        button.setSize(90,20);
-        button.setContentAreaFilled(false);
-        button.setBorderPainted(false);
-        button.setVisible(true);
-        this.add(button);
-    }
-
-    public void createMenuButton() {
-        JButton button = new JButton();
-        button.setFont(new Font("Tahoma", Font.ITALIC, 11));
-        button.setForeground(Color.white);
-        button.setBackground(Color.decode("#4c4c4c"));
-        button.setSize(90,20);
+        button.setBounds(x, y, d.width, d.height);
+        button.setSize(d);
         button.setContentAreaFilled(false);
         button.setBorderPainted(false);
         button.setVisible(true);
 
-        button.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                System.exit(0);
-            }
-        });
+        button.addActionListener(e -> action.getActionCommand());
 
         this.add(button);
-    }
-
-    public void createNewButton() {
-        JButton button2 = new JButton();
-        button2.setFont(new Font("Tahoma", Font.ITALIC, 11));
-        button2.setForeground(Color.white);
-        button2.setBackground(Color.decode("#4c4c4c"));
-        button2.setSize(110,20);
-        button2.setBounds(90,0,110,20);
-        button2.setContentAreaFilled(false);
-        button2.setBorderPainted(false);
-        button2.setVisible(true);
-
-        button2.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                System.exit(0);
-            }
-        });
-
-        this.add(button2);
     }
 
     public mainInterface() {
-        this.setSize(900,920);
+        this.setUndecorated(true);
+        Dimension def = new Dimension(900,900);
+        this.setBounds(0,0,900,900);
+        this.setPreferredSize(def);
+        this.setMaximumSize(def);
+        this.setMinimumSize(def);
+        this.pack();
+
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 
         ImageIcon img = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("chess.jpg")));
         JLabel background = new JLabel("", img, JLabel.CENTER);
-        background.setBounds(0, 50, 900, 990);
+        background.setBounds(0, -45, 900, 990);
 
         this.setVisible(true);
         this.setContentPane(background);
@@ -105,7 +77,7 @@ public class mainInterface extends JFrame {
         }
 
         layeredPane.add(mainBoard, DEFAULT_LAYER);
-        mainPanel.setBounds(98, 80, 720, 720);
+        mainPanel.setBounds(116, 91, 720, 720);
 
         // add pieces to individual squares
         ImageIcon duke = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("kb.svg")));
@@ -114,10 +86,13 @@ public class mainInterface extends JFrame {
 
         mainPanel.setVisible(true);
 
-        createMenuButton();
-        createNewButton();
+        createButton(menuButton, 0,5, new Dimension(100,40), new ActionEvent(this, 0, "System.exit(0)"));
+
+//        createButton(newGame, 105, 5, new Dimension(108,40));
+//        createButton(exit, 220, 5, new Dimension(112,40));
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.pack();
     }
 
     public static void main(String[] args) {

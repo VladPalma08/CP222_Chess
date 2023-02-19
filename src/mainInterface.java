@@ -115,16 +115,17 @@ public class mainInterface extends JFrame {
         button.setBorderPainted(false);
         button.setVisible(true);
         this.add(button);
-
-//        button.setFont(new Font("Tahoma", Font.ITALIC, 11));
-//        button.setForeground(Color.white);
-//        button.setBackground(Color.decode("#4c4c4c"));
     }
 
+    // run to test the game interface
     public static void main(String[] args) {
         mainInterface test = new mainInterface();
     }
 }
+
+//    button.setFont(new Font("Tahoma", Font.ITALIC, 11));
+//    button.setForeground(Color.white);
+//    button.setBackground(Color.decode("#4c4c4c"));
 
 //    add pieces to individual squares
 //    ImageIcon duke = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("kb.svg")));

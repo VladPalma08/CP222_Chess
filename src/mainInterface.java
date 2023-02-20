@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.util.Objects;
 
 import static javax.swing.JLayeredPane.DEFAULT_LAYER;
@@ -83,9 +84,9 @@ public class mainInterface extends JFrame {
         createButton(menuButton, 0, 5, new Dimension(100, 40), new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainInterface.super.setVisible(false);
                 menuInterface main = new menuInterface();
                 sounds.stopGameMusic();
+                mainInterface.super.setVisible(false);
             }
         });
 
@@ -128,31 +129,3 @@ public class mainInterface extends JFrame {
         mainInterface test = new mainInterface();
     }
 }
-
-//    button.setFont(new Font("Tahoma", Font.ITALIC, 11));
-//    button.setForeground(Color.white);
-//    button.setBackground(Color.decode("#4c4c4c"));
-
-//    add pieces to individual squares
-//    ImageIcon duke = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("white_rook.png")));
-//    JLabel image = new JLabel("", duke, JLabel.CENTER);
-//    image.setBounds(0, 0, 90, 90);
-//    JPanel panel = (JPanel) mainBoard.getComponent( 3 );
-//    panel.add(image);
-
-//    mainBoard.getComponent( 15 ).setBackground(Color.blue);
-
-//    previous logic for creating chess squares
-//    JPanel[] gridHori = new JPanel[4];
-//    JPanel[] gridVerti = new JPanel[4];
-//
-//    int forWidth = mainPanel.getWidth()/8;
-//    int forHeight = mainPanel.getHeight()/8;
-//    int count = 0;
-
-//    for(int i = 0; i < gridHori.length; i++) {
-//    gridHori[i] = new JPanel();
-//    gridHori[i].setBounds(count,0,forWidth,forHeight);
-//    gridHori[i].setBackground(Color.BLACK);
-//    mainPanel.add(gridHori[i]);
-//    count += (forWidth*2); }

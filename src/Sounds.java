@@ -14,9 +14,11 @@ public class Sounds {
         private String checkPath = soundsFolder + "check.wav";
         private String gameEndPath = soundsFolder + "game_end.wav";
         private String movePath = soundsFolder + "move.wav";
+        private String mainPath = soundsFolder + "menu_music.wav";
+        private String gamePath = soundsFolder + "game_music.wav";
 
         // initializing empty Clip variables for later assignment
-        private Clip captureSound, castleSound, checkSound, gameEndSound, moveSound;
+        private Clip captureSound, castleSound, checkSound, gameEndSound, moveSound, mainMusicSound, gameMusicSound;
 
         // assigns the Clip variables with audio clips; will play their respective sound
         public Sounds() {
@@ -27,6 +29,8 @@ public class Sounds {
                 checkSound = AudioSystem.getClip();
                 gameEndSound = AudioSystem.getClip();
                 moveSound = AudioSystem.getClip();
+                mainMusicSound = AudioSystem.getClip();
+                gameMusicSound = AudioSystem.getClip();
 
                 // assigning the Clip variable to the specific path of their audio, getAbsoluteFile matches the file names above
                 captureSound.open(AudioSystem.getAudioInputStream(new File(capturePath).getAbsoluteFile()));
@@ -34,6 +38,8 @@ public class Sounds {
                 checkSound.open(AudioSystem.getAudioInputStream(new File(checkPath).getAbsoluteFile()));
                 gameEndSound.open(AudioSystem.getAudioInputStream(new File(gameEndPath).getAbsoluteFile()));
                 moveSound.open(AudioSystem.getAudioInputStream(new File(movePath).getAbsoluteFile()));
+                mainMusicSound.open(AudioSystem.getAudioInputStream(new File(mainPath).getAbsoluteFile()));
+                gameMusicSound.open(AudioSystem.getAudioInputStream(new File(gamePath).getAbsoluteFile()));
 
             } catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
                 // catching exceptions
@@ -69,13 +75,22 @@ public class Sounds {
         }
 
         // this method specifically loops background music
-        public void playMusicMain() {
-//            musicMainSound.setFramePosition(0);
-//            musicMainSound.loop(Clip.LOOP_CONTINUOUSLY);
+        public void playMenuMusic() {
+            mainMusicSound.setFramePosition(0);
+            mainMusicSound.loop(Clip.LOOP_CONTINUOUSLY);
         }
 
-        // this method stops the music entirely
-        public void stopMusicMain() {
-//            musicMainSound.stop();
+        public void playGameMusic() {
+            gameMusicSound.setFramePosition(0);
+            gameMusicSound.loop(Clip.LOOP_CONTINUOUSLY);
+        }
+
+        // these methods stop these clips entirely
+        public void stopGameMusic() {
+            gameMusicSound.stop();
+        }
+
+        public void stopMenuMusic() {
+            mainMusicSound.stop();
         }
 }

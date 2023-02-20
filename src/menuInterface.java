@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class menuInterface extends JFrame {
 
-    JButton button;
+    Sounds sounds = new Sounds();
 
     public void createButton() {
         JButton button = new JButton();
@@ -23,6 +23,7 @@ public class menuInterface extends JFrame {
             public void actionPerformed(ActionEvent e){
                 menuInterface.super.setVisible(false);
                 mainInterface board = new mainInterface();
+                sounds.stopMenuMusic();
             }
         });
 
@@ -30,6 +31,9 @@ public class menuInterface extends JFrame {
     }
 
     public menuInterface() {
+        // playing main menu music
+        sounds.playMenuMusic();
+
         // setting the panel's dimensions
         Dimension def = new Dimension(800,800);
         this.setUndecorated(true);
@@ -53,5 +57,4 @@ public class menuInterface extends JFrame {
     public static void main(String[] args) {
         menuInterface main = new menuInterface();
     }
-
 }

@@ -17,7 +17,11 @@ public class mainInterface extends JFrame {
     JButton newGame;
     JButton exit;
 
+    Sounds sounds = new Sounds();
+
     public mainInterface() {
+        sounds.playGameMusic();
+
         // removing title bar from the program
         this.setUndecorated(true);
 
@@ -81,6 +85,7 @@ public class mainInterface extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 mainInterface.super.setVisible(false);
                 menuInterface main = new menuInterface();
+                sounds.stopGameMusic();
             }
         });
 
@@ -90,6 +95,7 @@ public class mainInterface extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 mainInterface.super.setVisible(false);
                 mainInterface newInstance = new mainInterface();
+                sounds.stopGameMusic();
             }
         });
 

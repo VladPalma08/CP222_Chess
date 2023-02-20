@@ -36,7 +36,7 @@ public class mainInterface extends JFrame {
         this.setResizable(false);
 
         // creating a new instance of an image and setting the interface's background
-        ImageIcon img = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("chess.jpg")));
+        ImageIcon img = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("chess_2.jpg")));
         JLabel background = new JLabel("", img, JLabel.CENTER);
         background.setBounds(0, 0, 900, 990);
 
@@ -134,9 +134,11 @@ public class mainInterface extends JFrame {
 //    button.setBackground(Color.decode("#4c4c4c"));
 
 //    add pieces to individual squares
-//    ImageIcon duke = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("kb.svg")));
+//    ImageIcon duke = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("white_rook.png")));
 //    JLabel image = new JLabel("", duke, JLabel.CENTER);
-//        image.setBounds(0, 0, 90, 90);
+//    image.setBounds(0, 0, 90, 90);
+//    JPanel panel = (JPanel) mainBoard.getComponent( 3 );
+//    panel.add(image);
 
 //    mainBoard.getComponent( 15 ).setBackground(Color.blue);
 

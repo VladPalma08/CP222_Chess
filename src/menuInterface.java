@@ -6,27 +6,21 @@ import java.util.Objects;
 
 public class menuInterface extends JFrame {
 
+    JButton startWS;
+    JButton startBS;
+    JButton exit;
+
     Sounds sounds = new Sounds();
 
-    public void createButton() {
-        JButton button = new JButton();
-        button.setFont(new Font("Tahoma", Font.ITALIC, 11));
-        button.setForeground(Color.white);
-        button.setText("Testing");
-        button.setBackground(Color.decode("#4c4c4c"));
-        button.setBounds(203,410,380,63 );
+    public void menuButtons(JButton button, int x, int y, Dimension d, ActionListener handler) {
+        button.addActionListener(handler);
+
+        button.setBounds(x, y, d.width, d.height);
+        button.setSize(d);
+
         button.setContentAreaFilled(false);
         button.setBorderPainted(false);
         button.setVisible(true);
-
-        button.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                menuInterface.super.setVisible(false);
-                mainInterface board = new mainInterface();
-                sounds.stopMenuMusic();
-            }
-        });
-
         this.add(button);
     }
 
@@ -44,13 +38,39 @@ public class menuInterface extends JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 
-        ImageIcon menuImage = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("menu.jpg")));
+        ImageIcon menuImage = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("menu_2.jpg")));
         JLabel background = new JLabel("", menuImage, JLabel.CENTER);
         background.setBounds(0, 0, 800, 800);
 
         this.setVisible(true);
         this.setContentPane(background);
-        createButton();
+
+        JButton startWS = new JButton();
+        menuButtons(startWS, 203, 404, new Dimension(388, 63), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainInterface main = new mainInterface();
+                sounds.stopMenuMusic();
+            }
+        });
+
+        JButton startBS = new JButton();
+        menuButtons(startBS, 203, 505, new Dimension(388, 63), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainInterface main = new mainInterface();
+                sounds.stopMenuMusic();
+            }
+        });
+
+        JButton exit = new JButton();
+        menuButtons(exit, 260, 611, new Dimension(280, 60), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
         this.pack();
     }
 

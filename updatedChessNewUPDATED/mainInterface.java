@@ -1,9 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.Objects;
+import java.util.*;
 
 import static javax.swing.JLayeredPane.DEFAULT_LAYER;
 import static javax.swing.SwingUtilities.isLeftMouseButton;
@@ -51,6 +49,7 @@ public class mainInterface extends JFrame implements MouseListener, MouseMotionL
 
         // creating a LayeredPane that holds a grid of JPanels, representing the individual chessboard squares
         layeredPane = new JLayeredPane();
+        layeredPane.addMouseListener(this);
         mainPanel.add(layeredPane);
         mainPanel.setLayout(new BorderLayout());
         layeredPane.setSize(720,720);
@@ -112,6 +111,8 @@ public class mainInterface extends JFrame implements MouseListener, MouseMotionL
             }
         });
 
+        // adding the pieces to the board (are we keeping this?)
+        refreshBoard();
         this.pack();
     }
 
@@ -131,7 +132,7 @@ public class mainInterface extends JFrame implements MouseListener, MouseMotionL
     public void boardupdate(Piece p, int po) {
 
         // add pieces to individual squares
-        ImageIcon duke = new ImageIcon(p.getImage().getScaledInstance(80, 80, Image.SCALE_DEFAULT));
+        ImageIcon duke = new ImageIcon(p.getImage().getScaledInstance(90, 90, Image.SCALE_DEFAULT));
         JLabel image = new JLabel(duke, JLabel.CENTER);
         image.setBounds(0, 0, 90, 90);
         JPanel panel = (JPanel) mainBoard.getComponent(po); // change index (currently 0) to access a specific square
@@ -140,7 +141,7 @@ public class mainInterface extends JFrame implements MouseListener, MouseMotionL
 
     }
 
-    public void refreshBoard(){
+    public void refreshBoard() {
         int po1 = 0;
         for (Piece[] p : board) {
             for (Piece p1 : p) {
@@ -153,51 +154,44 @@ public class mainInterface extends JFrame implements MouseListener, MouseMotionL
         repaint();
     }
 
-    public void boardRemove(int po){
-
+    public void boardRemove(int po) {
         JPanel panel = (JPanel) mainBoard.getComponent(po);
         panel.remove(panel.getComponent(0));
-
-
     }
-    public void setcolor(ArrayList<Integer> squares){
+
+    public void setColor(ArrayList<Integer> squares) {
         for(Integer square: squares){
             mainBoard.getComponent(square).setBackground(Color.blue);
-
         }
-
-
     }
-    public void movepeice(int pos1, int pos2) {
-        Piece tomove = board[pos1 / 8][pos1 % 8];
+
+    public void movePiece(int pos1, int pos2) {
+        Piece toMove = board[pos1 / 8][pos1 % 8];
         board[pos1 / 8][pos1 % 8] = null;
-        board[pos2 / 8][pos2 % 8]=tomove;
+        board[pos2 / 8][pos2 % 8]=toMove;
         board[pos2 / 8][pos2 % 8].setpostion(pos2);
         boardRemove(pos1);
         refreshBoard();
-        System.out.println(tomove.getPosition());
+        System.out.println(toMove.getPosition());
     }
 
-    @Override
-    public void mouseClicked(MouseEvent e) {
-//        if (isLeftMouseButton(e)) {
-//            Component pieceClicked = getComponentAt(e.getPoint());
-//            for (Piece[] p : board) {
-//                for (Piece p1 : p) {
-//                     if(pieceClicked == mainBoard.getComponent(p1.getPosition())){
-//                        JPanel panel = (JPanel) mainBoard.getComponent(game.getTile(p1));
-//
-//                    }
-//                }
-//            }
-//        }
-//        Move move = Move.
-        //find a way to get component of clicked tile and use it as an int
-        //invokeLater -> redraw board
-    }
-
+    // THIS IS THE LINE
+    // this is the method for changing the square color
     @Override
     public void mousePressed(MouseEvent e) {
+        if (isLeftMouseButton(e)) {
+            JLayeredPane panel = (JLayeredPane) e.getSource();
+            Component c = panel.getComponentAt(e.getPoint());
+//            c.getComponentAt(c.getLocationOnScreen()).setBackground(Color.blue);
+//            c.getComponentAt(c.getLocation()).setBackground(Color.blue);
+            Component f = c.getComponentAt(c.getMousePosition().getLocation());
+            f.setBackground(Color.blue);
+            System.out.println("testing");
+        }
+    }
+    @Override
+
+    public void mouseDragged(MouseEvent e) {
 
     }
 
@@ -206,29 +200,16 @@ public class mainInterface extends JFrame implements MouseListener, MouseMotionL
 
     }
 
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseDragged(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseMoved(MouseEvent e) {
-
-    }
+    // unused MouseEvents from implementation
+    public void mouseClicked(MouseEvent e) {}
+    public void mouseEntered(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {}
+    public void mouseMoved(MouseEvent e) {}
 
     public static void main(String[] args) {
         mainInterface test = new mainInterface();
     }
+
 }
 
 //    // previous logic for creating chess squares

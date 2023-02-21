@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6dc38d5b-3317-4030-8b7b-e80df7304e23" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../updatedChess/mainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../updatedChess/mainInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLACKbishop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLACKking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLACKknight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLACKpawn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLACKqueen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLACKrook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bishop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chessboard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColorOfPiece.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/King.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Knight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Move.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pawn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Piece.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sounds.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WHITEbishop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WHITEking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WHITEknight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WHITEpawn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WHITEqueen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WHITErook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/attackMove.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blackPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainInterface.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menuInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moveStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/BLACKbishop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/BLACKking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/BLACKknight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/BLACKpawn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/BLACKqueen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/BLACKrook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Bishop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Chess.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Chessboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/ColorOfPiece$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/ColorOfPiece$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/ColorOfPiece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/King.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Knight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Move$moveCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Move.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Pawn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Queen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Rook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/Sounds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/WHITEbishop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/WHITEking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/WHITEknight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/WHITEpawn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/WHITEqueen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/WHITErook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/attackMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/blackPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/chess.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/chess_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/mainInterface$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/mainInterface$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/mainInterface$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/mainInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/menu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/menuInterface$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/menuInterface$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/menuInterface$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/menuInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/menu_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/moveStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/regularMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sounds/capture.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sounds/castle.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sounds/check.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sounds/game_end.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sounds/game_music.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sounds/menu_music.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sounds/move.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/updateMoves.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/whitePlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regularMove.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/capture.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/castle.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/check.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/game_end.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/game_music.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/menu_music.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds/move.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/updateMoves.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whitePlayer.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Lsh99wDouUH4UKsMB54k5r7qV6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/desktop/OneDrive/CP222 Projects/Chess",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.mainInterface">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Chess" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mainInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mainInterface" />
+      <module name="Chess" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="menuInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="menuInterface" />
+      <module name="Chess" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.mainInterface" />
+        <item itemvalue="Application.menuInterface" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6dc38d5b-3317-4030-8b7b-e80df7304e23" name="Changes" comment="" />
+      <created>1676665543643</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676665543643</updated>
+      <workItem from="1676931661222" duration="975000" />
+      <workItem from="1676932902473" duration="5162000" />
+      <workItem from="1676955390084" duration="3918000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Game" memberName="board" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

@@ -14,10 +14,6 @@ class Queen extends Piece {
             this.image = ImageIO.read(new File("./"+color+"queen.png"));
         }catch (Exception e){
             System.out.println("could not find image queen");
-//            Long starttimee=currentTimeMillis();
-//            System.out.println(p1.getClass());
-//            Long endtimee=currentTimeMillis();
-//            System.out.println("w"+(endtimee-starttimee));
         }
     }
     @Override
